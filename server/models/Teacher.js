@@ -16,13 +16,7 @@ const TeacherSchema = new mongoose.Schema({
     },
 
     // Official email address, likely used for authentication and notifications
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-        lowercase: true,
-        trim: true
-    },
+    email: { type: String, unique: true },
 
     // Array of references to the 'Subject' model
     // Represents the subjects this teacher is qualified to teach (One-to-Many relationship)
